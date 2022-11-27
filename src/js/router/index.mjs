@@ -8,7 +8,8 @@ const routerFunction = async (hash, countryObj = new CountryFetcher()) => {
             setTimeout(() => { countryObj.renderAllCountryCards() }, 1000);
             break;
         case "search":
-            setTimeout(() => { countryObj.renderFilteredByNameCountryCards(filter) }, 1000);
+            const strings = filter.split('%20');
+            setTimeout(() => { countryObj.renderFilteredByNameCountryCards(strings[0]) }, 1000);
             break;
         case "filter":
             setTimeout(() => { countryObj.renderFilteredByRegionCountryCards(filter) }, 1000);

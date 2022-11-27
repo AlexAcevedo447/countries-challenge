@@ -131,7 +131,8 @@ class Components {
         return `
         <div class="details">
             <h2 class="details-title">
-                ${name.common}'s details
+                <a href="#_search_${name.common}" class="details-back__button">&larrb;</a>
+                <p>${name.common}'s details</p>
             </h2>
             <div class="details-content">
                 <div class="details-card">
