@@ -1,0 +1,116 @@
+.card2 {
+  display: flex;
+  flex-direction: column;
+  width: var(--width-290);
+  height: 120px;
+  /* overflow: hidden; */
+  border: 1px solid var(--white);
+  background-color: var(--white-40);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-15);
+  transition: var(--transition-5);
+  cursor: pointer;
+  text-align: center;
+}
+
+.card2:hover {
+  height: var(--height-390);
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--light-blue);
+}
+
+.card2:hover .card2__text {
+  opacity: 0;
+}
+
+.card2:hover .card2__info--content {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transition: var(--transition-5);
+}
+
+.card2__info--content {
+  opacity: 0;
+  transition: var(--transition-1);
+}
+
+/* .card2__text */
+.card2__text {
+  height: 0px;
+  text-align: center;
+  font-size: 50px;
+  color: var(--white);
+  text-shadow: 0 0 0.5rem var(--black);
+  line-height: 120px;
+  transition: var(--transition-5);
+}
+
+.card2__title {
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: var(--transition-5);
+}
+
+.card2__subtitle {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.card2__link {
+  display: block;
+  line-height: 50px;
+  width: 100px;
+  height: 50px;
+  border: 1px solid var(--white);
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+}
+
+.card2__link:hover {
+  box-shadow: 0 0 0.5rem var(--white);
+}
+
+@media (max-width: 1023px) {
+    .card2{
+
+    }
+}
+
+@media (max-width: 950px) {
+    .card2{
+        width: 190px;
+        height: 100px;
+        line-height: 15px;
+    }
+    .card2__text{
+        font-size: 30px;
+    }
+
+    .card2:hover .card2__info--content{
+        height: 240px;
+    }
+
+    .card2__link{
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .card2__subtitle{
+        font-size: 14px;
+    }
+
+    .card2__title{
+        font-size: 15px;
+    }
+}

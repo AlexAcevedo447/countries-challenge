@@ -1,0 +1,140 @@
+.card1{
+    position: relative;
+    width: var(--width-290);
+    height: var(--height-390);
+    cursor: pointer;
+    perspective: 1000px;
+    text-align: center;
+}
+
+.card1__text{
+    font-size: 30px;
+    text-shadow: var(--text-shadow);
+    color: var(--white);
+}
+
+.card1__front, 
+.card1__back{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--white);
+    background-color: var(--white-40);
+    border-radius: var(--border-15);
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.card1__front{
+    transform: rotateY(0deg);
+    transition: var(--transition-5);
+}
+
+.card1__back{
+    transform: rotateY(180deg);
+    transition: var(--transition-5);
+}
+
+
+.card1:hover .card1__front{
+    transform: rotateY(180deg);
+}
+
+.card1:hover .card1__back{
+    transform: rotateY(360deg);
+}
+
+.card1__info--img{
+    width: 100%;
+    height: 40%;
+}
+
+.card1__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+.card1__info--content{
+    width: 100%;
+    height: 60%;
+    background-color: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.card1__title{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.card1__subtitle{
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.card1__link{
+    display: block;
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid var(--white);
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+}
+
+.card1__link:hover{
+    box-shadow: 0 0 .5rem var(--white);
+}
+
+
+
+@media (max-width: 950px) {
+    .card1{
+        width: 190px;
+        height: 240px;
+    }
+
+    .card1__text{
+        font-size: 20px;
+    }
+
+    .card1__front{
+        gap: .5rem;
+    }
+
+    .card1__info--content{
+        gap: .5rem;
+    }
+
+    .card1__title{
+        font-size: 18px;
+    }
+
+    .card1__subtitle{
+        font-size: 14px;
+    }
+
+    .card1__text{
+        font-size: 30px;
+    }
+
+    .card1__link{
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+}

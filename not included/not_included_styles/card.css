@@ -1,0 +1,118 @@
+.card{
+    width: var(--width-290);
+    height: var(--height-390);
+    border: 1px solid var(--white);
+    border-radius: var(--border-15);
+    cursor: pointer;
+    background-color: var(--white-40);
+    position: relative;
+    /*handle overflow or out of line objects*/
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover .card__content{
+    transform: translateY(0px);
+}
+
+.card:hover .card__text{
+    opacity: 0;
+}
+
+.card__text{
+    opacity: 1;
+    font-size: 50px;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+    transition: var(--transition-5);
+}
+
+.card__content{
+    position: absolute;
+    width: 290px;
+    height: 390px;
+    background-color: var(--light-blue);
+    border-radius: var(--border-15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*space between columns and rows*/
+    gap: 2rem;
+    overflow: hidden;
+    transform: translateY(390px);
+    transition: var(--transition-5);
+}
+
+.card__img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card__link{
+    display: block;
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid var(--white);
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+}
+
+.card__link:hover{
+    box-shadow: 0 0 .5rem var(--white);
+}
+
+.card__title{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.card__subtitle{
+    font-size: 1rem;
+    color: var(--white);
+}
+
+@media (max-width: 1023px) {
+    .card{
+
+    }
+}
+
+@media (max-width: 950px) {
+    .card, .card__content{
+        width: 190px;
+        height: 240px;
+    }
+
+    .card__content{
+        gap: 1rem;
+    }
+
+    .card__img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .card__title{
+        font-size: 18px;
+    }
+
+    .card__text{
+        font-size: 30px;
+    }
+
+    .card__link{
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+}
